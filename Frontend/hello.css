@@ -1,0 +1,159 @@
+/* 🔥 Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* 🌐 Body */
+body {
+  background: linear-gradient(135deg, #f5f7fa, #e4e7eb);
+  color: #333;
+  padding: 20px;
+}
+
+/* 🔝 Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+/* 🎛 Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.controls input,
+.controls select {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.controls input {
+  width: 260px;
+}
+
+.controls input:focus,
+.controls select:focus {
+  transform: scale(1.05);
+}
+
+/* 🛒 Grid */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+/* 📦 Card */
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* 🖼 Image */
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* 📝 Title */
+.card h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+  min-height: 40px;
+}
+
+/* 💰 Price */
+.card p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2ecc71;
+  margin-bottom: 6px;
+}
+
+/* ⭐ Rating */
+.rating {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* 🛒 Button */
+.addBtn {
+  padding: 10px;
+  border: none;
+  background: linear-gradient(135deg, #6c63ff, #4facfe);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.addBtn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* ⏳ Loading */
+.loading {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+  color: #555;
+}
+
+/* ❌ Error */
+.error {
+  text-align: center;
+  color: red;
+  margin-top: 20px;
+}
+
+/* 🌙 Dark Mode */
+body.dark {
+  background: #121212;
+  color: #fff;
+}
+
+body.dark .card {
+  background: #1e1e1e;
+}
+
+body.dark .controls input,
+body.dark .controls select {
+  background: #2a2a2a;
+  color: white;
+}
+
+/* 📱 Responsive */
+@media (max-width: 500px) {
+  .controls input {
+    width: 100%;
+  }
+}
